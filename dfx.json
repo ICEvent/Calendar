@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "calendar": {
+      "main": "src/calendar/main.mo",
+      "type": "motoko"
+    },
+    "calendar_assets": {
+      "dependencies": [
+        "calendar"
+      ],
+      "frontend": {
+        "entrypoint": "src/calendar_assets/src/index.html"
+      },
+      "source": [
+        "src/calendar_assets/assets",
+        "dist/calendar_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.0",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
